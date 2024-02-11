@@ -1,0 +1,57 @@
+<pre>
+  Please solve:
+
+  1. When entering an invalid email address, the error message is not displayed.
+  2. When the form is invalid, the button is still enabled.
+  3. Actions should be aligned to the left of its container.
+  4. The results card should have the same height as the "Register form" card.
+  5. Uppon submitting the form, the results should be displayed in the right container.
+</pre>
+<div class="main-container">
+  <div class="main-container__form-container mat-elevation-z1">
+    <h2>Register form</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="submitForm()">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Name">
+        <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Lastname</mat-label>
+        <input matInput formControlName="lastName" placeholder="Lastname">
+        <mat-error *ngIf="registrationForm.get('lastName')?.hasError('required')">
+          Lastname is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Email">
+        <mat-error *ngIf="registrationForm.get('email')?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="registrationForm.get('email')?.hasError('email')">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-checkbox formControlName="acceptsTandC">I accept the terms and conditions</mat-checkbox>
+      <div class="actions">
+        <button mat-button color="primary" type="reset" class="actions__cancel-btn" (click)="reset()">Clear</button>
+        <button mat-raised-button color="primary">Register</button>
+      </div>
+    </form>
+
+  </div>
+  <div class="main-container__results">
+    <h2>Results</h2>
+    @if (submitted) {
+      <div>
+        Sent values
+        <pre>
+    {{ registrationForm.value | json }}
+  </pre>
+      </div>
+    }
+  </div>
+</div>
