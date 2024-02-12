@@ -4,6 +4,7 @@ import { MatListItem, MatNavList } from '@angular/material/list';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
 import { CurrencyPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-employee-list',
@@ -14,6 +15,7 @@ import { CurrencyPipe } from '@angular/common';
     MatIcon,
     MatIconButton,
     CurrencyPipe,
+    RouterLink
   ],
   templateUrl: './employee-list.component.html',
   styleUrl: './employee-list.component.scss'
