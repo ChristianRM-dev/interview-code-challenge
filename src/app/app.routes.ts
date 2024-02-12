@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: './challenge-1',
+    redirectTo: 'challenge-1',
     pathMatch: 'full'
   },
   {
