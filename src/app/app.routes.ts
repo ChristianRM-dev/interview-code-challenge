@@ -3,6 +3,11 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: './challenge-1',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     loadComponent: () => import('./layout/layout.component').then(m => m.LayoutComponent),
     children: [
       {
