@@ -15,7 +15,7 @@ export const routes: Routes = [
       },
       {
         path: 'challenge-3',
-        loadComponent: () => import('./empty/empty.component').then(m => m.EmptyComponent)
+        loadComponent: () => import('./challenge-3/create-employee/create-employee.component').then(m => m.CreateEmployeeComponent)
       },
       {
         path: 'challenge-4',

@@ -1,5 +1,5 @@
 import { Component, Input} from '@angular/core';
-import { Employee } from '../employee.service';
+import { Employee } from '../../services/employee.service';
 import { MatListItem, MatNavList } from '@angular/material/list';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';

@@ -1,5 +1,5 @@
 import { Component, Signal } from '@angular/core';
-import { Employee, EmployeeService } from './employee.service';
+import { Employee, EmployeeService } from '../services/employee.service';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';

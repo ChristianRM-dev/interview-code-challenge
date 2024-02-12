@@ -24,7 +24,6 @@ import { MatAnchor } from '@angular/material/button';
       <a mat-button routerLink="/challenge-1" routerLinkActive="active">Challenge 1</a>
       <a mat-button routerLink="/challenge-2" routerLinkActive="active">Challenge 2</a>
       <a mat-button routerLink="/challenge-3" routerLinkActive="active">Challenge 3</a>
-      <a mat-button routerLink="/challenge-4" routerLinkActive="active">Challenge 4</a>
       </nav>
     </mat-toolbar>
 

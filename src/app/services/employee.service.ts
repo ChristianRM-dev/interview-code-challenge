@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { delay, Observable, of } from 'rxjs';
 
 export interface Employee {
-  id: number;
+  id?: number;
   name: string;
   department: 'payments' | 'customer-service' | 'sales',
   salary: number;
@@ -30,6 +30,12 @@ export class EmployeeService {
   findOne(id: number): Observable<Employee | null> {
     return of(this.employeesMock.find(employee => employee.id === id) || null).
     pipe(delay(750));
+  }
+
+  addEmployee(employee: Employee): Observable<Employee> {
+    const newEmployee = { ...employee, id: this.employeesMock.length + 1 };
+    this.employeesMock.push(newEmployee);
+    return of(newEmployee).pipe(delay(750))
   }
 
   private getRandomSalary(): number {
