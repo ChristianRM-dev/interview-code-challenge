@@ -1,0 +1,12 @@
+<mat-nav-list>
+  @for (employee of employees ; track employee.id) {
+    <mat-list-item>
+      <a matListItemTitle>
+        {{employee.name}} - Salary: {{employee.salary | currency }}
+      </a>
+      <button mat-icon-button  matListItemMeta>
+        <mat-icon>info</mat-icon>
+      </button>
+    </mat-list-item>
+  }
+</mat-nav-list>

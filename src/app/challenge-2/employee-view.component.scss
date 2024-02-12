@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+
+  &__list {
+    flex: 1;
+    padding: 20px;
+  }
+
+  &__details {
+    flex: 1;
+    padding: 20px;
+    border: 1px dotted #e0e0e0;
+  }
+}

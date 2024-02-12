@@ -1,0 +1,23 @@
+<pre>
+  Here we have a list of employees, each employee has a name, a position, and a salary.
+
+  Add a link to each employee name, so that when I click on the name, I can see the details
+  of the selected employee on the right.
+
+  Optional: sort the list of employees salary in ascending order.
+
+  - Note: the employee details component already exists. Don't forget to give it a look before
+  you start crafting the solution.
+</pre>
+<div class="container">
+  <div class="mat-elevation-z1 container__list">
+    <h2>Employee list</h2>
+    <app-employee-list [employees]="(employees$ | async) ?? []"></app-employee-list>
+  </div>
+  <div class="container__details">
+    <h2>Employee details</h2>
+    <!--  TODO: In here we should see the employee details -->
+  </div>
+</div>
+
+

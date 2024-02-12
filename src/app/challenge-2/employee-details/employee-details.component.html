@@ -1,0 +1,17 @@
+@if (loading) {
+  <div class="loading-container">
+    <mat-spinner [diameter]="40"></mat-spinner>
+  </div>
+} @else {
+  <ul>
+    <li>
+      <strong>Name</strong>: {{employeeDetails?.name}}
+    </li>
+    <li>
+      <strong>Department</strong>: {{employeeDetails?.department}}
+    </li>
+    <li>
+      <strong>Salary</strong>: {{employeeDetails?.salary | currency}}
+    </li>
+  </ul>
+}

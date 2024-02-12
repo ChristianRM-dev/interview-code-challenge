@@ -11,7 +11,7 @@ export const routes: Routes = [
       },
       {
         path: 'challenge-2',
-        loadComponent: () => import('./empty/empty.component').then(m => m.EmptyComponent)
+        loadComponent: () => import('./challenge-2/employee-view.component').then(m => m.EmployeeViewComponent),
       },
       {
         path: 'challenge-3',
