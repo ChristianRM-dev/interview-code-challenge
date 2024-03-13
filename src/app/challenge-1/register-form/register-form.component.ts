@@ -43,11 +43,10 @@ export class RegisterFormComponent {
     }),
     email: new FormControl<string>('', {
       nonNullable: true,
-      validators: [Validators.required]
+      validators: [Validators.required, Validators.email]
     }),
     acceptsTandC: new FormControl<boolean>(false, {
-      nonNullable: true,
-      validators: [Validators.requiredTrue]
+      nonNullable: true
     })
   });
 
