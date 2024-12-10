@@ -1,12 +1,12 @@
 <mat-nav-list>
   @for (employee of employees ; track employee.id) {
-    <mat-list-item>
-      <a matListItemTitle [routerLink]="[employee.id]">
-        {{employee.name}} - Salary: {{employee.salary | currency }}
-      </a>
-      <button mat-icon-button  matListItemMeta>
-        <mat-icon>info</mat-icon>
-      </button>
-    </mat-list-item>
+  <mat-list-item>
+    <a matListItemTitle [routerLink]="['/challenge-2', employee.id]">
+      {{employee.name}} - Salary: {{employee.salary | currency }}
+    </a>
+    <button mat-icon-button matListItemMeta>
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-list-item>
   }
 </mat-nav-list>
