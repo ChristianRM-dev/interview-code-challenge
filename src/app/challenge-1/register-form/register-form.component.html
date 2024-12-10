@@ -40,7 +40,7 @@
       <mat-checkbox formControlName="acceptsTandC">I accept the terms and conditions</mat-checkbox>
       <div class="actions">
         <button mat-button color="primary" type="reset" class="actions__cancel-btn" (click)="reset()">Clear</button>
-        <button mat-raised-button color="primary">Register</button>
+        <button mat-raised-button color="primary" [disabled] = "!registrationForm.valid">Register</button>
       </div>
     </form>
 

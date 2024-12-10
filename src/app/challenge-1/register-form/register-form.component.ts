@@ -46,7 +46,8 @@ export class RegisterFormComponent {
       validators: [Validators.required, Validators.email]
     }),
     acceptsTandC: new FormControl<boolean>(false, {
-      nonNullable: true
+      nonNullable: true,
+      validators:[Validators.requiredTrue]
     })
   });
 
