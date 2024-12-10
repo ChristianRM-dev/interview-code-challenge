@@ -12,7 +12,7 @@ import { CurrencyPipe } from '@angular/common';
   ],
   templateUrl: './employee-preview.component.html',
   styleUrl: './employee-preview.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class EmployeePreviewComponent {
   @Input()

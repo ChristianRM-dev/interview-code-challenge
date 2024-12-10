@@ -19,7 +19,7 @@ import { EmployeePreviewComponent } from '../employee-preview/employee-preview.c
   ],
   templateUrl: './create-employee.component.html',
   styleUrl: './create-employee.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CreateEmployeeComponent {
   submitting = false;
@@ -37,7 +37,17 @@ export class CreateEmployeeComponent {
       next: (newEmployee) => {
         this.submitting = false;
         alert('New employee added!');
+        this.resetForm()
       }
     });
+  }
+
+  resetForm(): void {
+    console.log("Reseting form")
+    this.previewableEmployee = {
+      name: undefined,
+      department: undefined,
+      salary: undefined
+    };
   }
 }
